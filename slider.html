@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+    <!--  -->
+    <body>
+      <div class="wrapper">
+        <ul class="menu">
+          <a class="projekt projekt__name" href="index.html">Strona Główna</a>
+          <li class="projekt">
+            <a href="chooseFilm.html" class="projekt__name"> Choose Film</a>
+          </li>
+          <li class="projekt">
+            <a href="commentForm.html" class="projekt__name"> add comment</a>
+          </li>
+          <li class="projekt">
+            <a href="slider.html" class="projekt__name">slider</a>
+          </li>
+          <li class="projekt">
+            <a href="jackHand.html" class="projekt__name">jack hand</a>
+          </li>
+        </ul>
+        <section class="main">
+          <div class="slider">
+            <img src="./images/img1.jpg" alt="" class="slider__image" id="slider__image"/>
+            <svg class="slider__svg slider__svg--left" id="left-arrow">
+              <use  xlink:href="./images/sprite.svg#icon-arrow-with-circle-left">
+            </svg>
+            <svg class="slider__svg slider__svg--right" id="right-arrow">
+              <use
+                xlink:href="./images/sprite.svg#icon-arrow-with-circle-right"
+              >
+            </svg>
+           
+            <div class="slider__control-panel">
+          
+             </div>
+          </div>
+          
+        </section>
+  
+        <section class="footer"></section>
+      </div>
+      <script src="./scripts/slider.js" type="module"></script>
+    </body>
+  <!--  -->
+</html>

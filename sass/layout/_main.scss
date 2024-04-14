@@ -1,0 +1,23 @@
+.main {
+  margin-top: -10vh;
+  padding: 1rem;
+  @include respond(medium) {
+    margin-top: 0;
+  }
+  &__home {
+    align-self: center;
+    background-color: $color-gray;
+    min-width: 50vw;
+    max-width: 90%;
+    min-height: 30vw;
+
+    margin: 2rem 0;
+
+    .first {
+      text-align: center;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}

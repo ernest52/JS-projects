@@ -1,0 +1,87 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  cursor: pointer;
+  &__image {
+    // display: block;
+    // width: 100%;
+    // height: 100%;
+    @extend %addImage;
+  }
+  &__svg {
+    // width: 4rem;
+    // height: 4rem;
+    @include createCircle(7rem);
+    fill: $color-gray;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    z-index: 5;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+    &:hover {
+      fill: darken($color-gray, 20%);
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    @include block_absolute;
+    transition: all 0.2s;
+  }
+
+  &:hover::after {
+    background-color: rgba(black, 0.8);
+  }
+  &__control-panel {
+    @include block_absolute(bottom, left, 2rem, 50%);
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    & > span {
+      position: relative;
+      @include createCircle(3rem);
+      // border: 1px solid $color-gray-dark;
+      @include border($color: $color-gray-dark);
+    }
+    .active::after {
+      content: " ";
+      display: block;
+      @include createCircle;
+      @include block_absolute(top, left, 50%, 50%);
+
+      transform: translate(-50%, -50%);
+      background-color: $color-gray;
+    }
+  }
+  &__loader {
+    position: relative;
+    z-index: 10;
+    height: 1rem;
+    flex: 0 0 100%;
+    background-color: black;
+    margin-bottom: 1rem;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: skyblue;
+      @include block_absolute;
+      // animation: fillLoader 3s 3s linear infinite;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.movie-card {
+  display: grid;
+  grid-template-columns: 10vw 1fr;
+  grid-template-rows:
+    [title-start]10vh [title-end content-start] 30vh
+    [content-end footer-start] 10vh [footer-end];
+  @include respond(medium) {
+    grid-template-columns: 20vw 1fr;
+  }
+  @include respond(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  margin-top: 1rem;
+  width: 90%;
+
+  &__img {
+    grid-row: content-start/content-end;
+    grid-column: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    display: block;
+    max-height: 100%;
+  }
+  &__title {
+    grid-column: 2/3;
+    font-size: calc(#{$font-size} + 0.5rem);
+    color: $color-gray-light;
+    grid-row: title-start/title-end;
+    background-color: $color-gray-dark;
+    letter-spacing: 3px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content {
+    grid-row: content-start/content-end;
+    grid-column: 2/3;
+    background-color: lighten($color-gray-dark, 10%);
+    color: darken($color-gray-light, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: calc(#{$font-size} + 0.3rem);
+    @include respond(medium) {
+      flex-direction: column;
+    }
+  }
+  &__footer {
+    grid-column: 2/3;
+    padding: 1rem;
+    background-color: lighten($color-gray-dark, 20%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__button {
+    @extend %btngray;
+    display: block;
+    margin-right: 5%;
+    padding: 1rem;
+    width: 10vw;
+    @include respond(small) {
+      width: 20vw;
+    }
+    @include respond(small) {
+      width: 70vw;
+    }
+  }
+}

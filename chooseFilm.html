@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="menu">
+        <a class="projekt projekt__name" href="index.html">Strona Główna</a>
+        <li class="projekt">
+          <a href="chooseFilm.html" class="projekt__name"> Choose Film</a>
+        </li>
+        <li class="projekt">
+          <a href="commentForm.html" class="projekt__name"> add comment</a>
+        </li>
+        <li class="projekt">
+          <a href="slider.html" class="projekt__name">slider</a>
+        </li>
+        <li class="projekt">
+          <a href="jackHand.html" class="projekt__name">jack hand</a>
+        </li>
+      </ul>
+      <section class="main">
+        <div class="deceider">
+          <h1 class="deceider__heading--main deceider__heading">
+            Filmy do polecenia
+          </h1>
+          <h2 class="deceider__heading deceider__heading--rec">
+            Polecane Filmy
+          </h2>
+          <div class="deceider__holder" id="giver"></div>
+          <h2 class="deceider__heading deceider__heading--add">
+            Dodaj do listy
+          </h2>
+          <div class="deceider__holder" id="taker"></div>
+        </div>
+      </section>
+
+      <section class="footer"></section>
+    </div>
+    <script src="./scripts/movieSelector.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jednoręki bandyta</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <!--  -->
+  <body>
+    <div class="wrapper">
+      <ul class="menu">
+        <a class="projekt projekt__name" href="index.html">Strona Główna</a>
+        <li class="projekt">
+          <a href="chooseFilm.html" class="projekt__name"> Choose Film</a>
+        </li>
+        <li class="projekt">
+          <a href="commentForm.html" class="projekt__name"> add comment</a>
+        </li>
+        <li class="projekt">
+          <a href="slider.html" class="projekt__name">slider</a>
+        </li>
+        <li class="projekt">
+          <a href="jackHand.html" class="projekt__name">jack hand</a>
+        </li>
+      </ul>
+      <section class="main">
+        <div class="handJack">
+          <h1>Jednoręki bandyta</h1>
+
+          <section class="handJack__game">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+          </section>
+
+          <section class="handJack__play">
+            <input type="number" placeholder="Podaj stawkę" id="bid" />
+            <button id="start">Zakręć!</button>
+          </section>
+
+          <section class="handJack__panel">
+            TWOJE SRODKI PRZED KOLEJNĄ GRĄ TO: <span class="wallet"></span>
+          </section>
+
+          <section class="score">
+            <span class="result"></span> Za tobą
+            <span class="number">0</span> gier, w tym
+            <span class="win">0</span> wygranych i
+            <span class="loss">0</span> przegranych
+          </section>
+        </div>
+      </section>
+
+      <section class="footer"></section>
+    </div>
+
+    <script src="./scripts/jackHand/Game.js" type="module"></script>
+  </body>
+</html>

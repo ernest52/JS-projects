@@ -1,0 +1,49 @@
+.deceider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  color: $color-gray-light;
+  grid-column-gap: 1rem;
+  background-color: $color-gray-dark;
+  @include respond(medium) {
+    display: flex;
+    flex-direction: column;
+    background-color: crimson;
+  }
+  &__heading {
+    background-color: lighten($color-gray-dark, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    @include respond(medium) {
+      padding: 2rem;
+      margin-top: 1rem;
+    }
+    &--main {
+      margin: 0;
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      background-color: $color-gray-dark;
+    }
+    &--rec {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    &--add {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+  &__holder {
+    background-color: crimson;
+  }
+  #taker {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #giver {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}

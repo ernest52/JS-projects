@@ -1,0 +1,67 @@
+@use "sass:math";
+// mixin for mediaqueries
+@mixin respond($breakpoint) {
+  @if ($breakpoint==x-large) {
+    @media only screen and (max-width: $x-large) {
+      @content;
+    }
+  }
+  @if ($breakpoint==large) {
+    @media only screen and (max-width: $large) {
+      @content;
+    }
+  }
+  @if ($breakpoint==medium) {
+    @media only screen and (max-width: $medium) {
+      @content;
+    }
+  }
+  @if ($breakpoint==small) {
+    @media only screen and (max-width: $small) {
+      @content;
+    }
+  }
+  @if ($breakpoint==x-small) {
+    @media only screen and (max-width: $x-small) {
+      @content;
+    }
+  }
+}
+
+//  mixin to create and set flex container
+@mixin flex__container(
+  $jc: flex-start,
+  $ai: stretch,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $jc;
+  align-items: $ai;
+}
+//  mixin to create and set absolute element
+@mixin block_absolute($y-axis: top, $x-axis: left, $y: 0, $x: 0) {
+  position: absolute;
+  @if ($y-axis==bottom) {
+    bottom: $y;
+  } @else {
+    top: $y;
+  }
+  @if ($x-axis==left) {
+    left: $x;
+  } @else {
+    right: $x;
+  }
+}
+// mixin to create circle element
+@mixin createCircle($x: 1rem, $border-radius: 50%) {
+  width: $x;
+  height: $x;
+  border-radius: $border-radius;
+}
+// mixin to create border
+@mixin border($size: 1px, $style: solid, $color: black) {
+  border: $size $style $color;
+}

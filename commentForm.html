@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <!--  -->
+  <body>
+    <div class="wrapper">
+      <ul class="menu">
+        <a class="projekt projekt__name" href="index.html">Strona Główna</a>
+        <li class="projekt">
+          <a href="chooseFilm.html" class="projekt__name"> Choose Film</a>
+        </li>
+        <li class="projekt">
+          <a href="commentForm.html" class="projekt__name"> add comment</a>
+        </li>
+        <li class="projekt">
+          <a href="slider.html" class="projekt__name">slider</a>
+        </li>
+        <li class="projekt">
+          <a href="jackHand.html" class="projekt__name">jack hand</a>
+        </li>
+      </ul>
+      <section class="main">
+        <div class="comment">
+          <form action="" class="comment__form">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="username"
+            />
+            <div class="comment__area-holder">
+              <textarea type="text" name="comment" id="comment"> </textarea>
+              <span id="warning"> </span>
+            </div>
+            <div class="color__panel">
+              <div id="color__panel-page">
+                <p>Change color of webpage</p>
+              </div>
+              <div id="color__panel-comment">
+                <p>Change color of comment</p>
+              </div>
+            </div>
+
+            <button type="submit" id="comment__submit">Add comment</button>
+          </form>
+          <div class="comment__box">
+            <img src="./images/img1.jpg" alt="" id="user-img" />
+            <span class="" id="author">Piotr Kowalki</span>
+            <span id="comment-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              rerum perferendis corrupti unde nisi numquam. Pariatur adipisci
+              vitae eum eos! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Quibusdam facere in, quam facilis fugit velit assumenda.
+              Facere, ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Tenetur vitae veniam architecto reprehenderit voluptate
+              labore accusamus beatae provident saepe! Expedita error accusamus
+              totam quod eos velit odit corporis quas aspernatur, deserunt hic
+              quibusdam sunt vitae dolores reiciendis quos suscipit natus?
+              Adipisci hic quasi facere sint odit reprehenderit provident quae
+              cum! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Eaque illum in soluta eos similique repellat tempore, veniam
+              molestias iste velit. Asperiores iure alias quae voluptatem
+              reprehenderit, amet sapiente. Facilis quasi quibusdam nostrum fuga
+              dolorem eius a omnis? Exercitationem odio nobis nihil atque
+              reprehenderit, quaerat iure ea sapiente cumque reiciendis
+              recusandae officia odit sequi libero voluptates accusamus
+              perspiciatis enim repellendus. Veniam nostrum omnis, asperiores
+              voluptatibus impedit quisquam beatae adipisci ratione ea voluptate
+              sequi expedita sunt ullam soluta obcaecati corrupti voluptas
+              officia quos blanditiis sapiente, optio amet, voluptatem alias?
+              Odit libero asperiores, quibusdam dolorem reiciendis adipisci
+              suscipit voluptatem consequatur esse minima. Vero?
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer"></section>
+    </div>
+    <script type="module" src="./scripts/comment-form.js"></script>
+  </body>
+</html>
